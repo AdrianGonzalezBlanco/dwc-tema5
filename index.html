@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radiografía: Chrome DevTools</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#caracteristicas">Características</a></li>
+        <li><a href="#detalles">Más info</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <h1>Radiografía: Chrome DevTools</h1>
+      <p>
+        Chrome DevTools es el conjunto de herramientas de desarrollo integrado
+        en Google Chrome. Permite inspeccionar y depurar HTML, CSS y JavaScript,
+        analizar el rendimiento de la red y medir la accesibilidad o el rendimiento
+        de una página desde el propio navegador.
+      </p>
+
+      <button id="boton-mensaje" type="button">
+        Escribir mensaje
+      </button>
+      <p id="mensaje" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="detalles">
+      <h2>Información ampliada</h2>
+      <button id="boton-detalles" type="button" aria-expanded="false" aria-controls="detalles-contenido">
+        Mostrar más información
+      </button>
+      <div id="detalles-contenido" class="oculto">
+        <p>
+          Se abre con <kbd>F12</kbd> o con <kbd>Ctrl</kbd> + <kbd>Mayús</kbd> + <kbd>I</kbd>
+          (en macOS, <kbd>Cmd</kbd> + <kbd>Opción</kbd> + <kbd>I</kbd>).
+        </p>
+        <p>
+          Sus paneles principales son: <strong>Elements</strong> (DOM y CSS),
+          <strong>Console</strong> (mensajes y ejecución de JS),
+          <strong>Sources</strong> (depuración paso a paso),
+          <strong>Network</strong> (peticiones HTTP) y
+          <strong>Performance</strong> (análisis de rendimiento).
+        </p>
+      </div>
+    </section>
+
+    <section id="caracteristicas">
+      <h2>Características principales</h2>
+
+      <div class="buscador">
+        <label for="buscador">Buscar característica</label>
+        <input
+          type="search"
+          id="buscador"
+          name="buscador"
+          placeholder="Escribe un nombre o descripción..."
+          autocomplete="off"
+        >
+      </div>
+
+      <div id="lista-caracteristicas" class="lista-caracteristicas" aria-live="polite"></div>
+      <p id="sin-resultados" class="sin-resultados oculto">
+        No se han encontrado características que coincidan con tu búsqueda.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Radiografía de herramientas de desarrollo. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
